@@ -76,5 +76,14 @@ void setUp() {
         assertTrue(result == a - b, "subtraction failed");
     }
 
+    @Disabled
+    @Test
+    void multiply_1_with_2() {
+        int a = 1;
+        int b = 2;
 
+        int result = calculator.multiply(a, b);
+
+        assertEquals(a * b, result, "addition failed");
+    }
 }
