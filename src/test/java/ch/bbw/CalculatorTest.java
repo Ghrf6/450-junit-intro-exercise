@@ -4,8 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
 
@@ -75,7 +74,7 @@ void setUp() {
 
         assertTrue(result == a - b, "subtraction failed");
     }
-    
+
     @Test
     void multiply_1_with_2() {
         int a = 1;
@@ -85,4 +84,14 @@ void setUp() {
 
         assertEquals(a * b, result, "addition failed");
     }
+
+    @Test
+    void divide_by_0() {
+        int a = 10;
+        int b = 0;
+
+        assertThrows(ArithmeticException.class, () -> calculator.divide(a, b),
+                "Division by zero should throw");
+    }
+
 }
