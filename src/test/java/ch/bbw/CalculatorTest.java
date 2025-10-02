@@ -75,8 +75,7 @@ void setUp() {
 
         assertTrue(result == a - b, "subtraction failed");
     }
-
-    @Disabled
+    
     @Test
     void multiply_1_with_2() {
         int a = 1;
