@@ -82,7 +82,7 @@ void setUp() {
 
         int result = calculator.multiply(a, b);
 
-        assertEquals(a * b, result, "addition failed");
+        assertEquals(a * b, result, "multiplication failed");
     }
 
     @Test
